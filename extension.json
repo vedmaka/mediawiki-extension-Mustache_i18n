@@ -1,0 +1,19 @@
+{
+	"name": "Mustache_i18n",
+	"version": "0.0.1",
+	"author": [
+		"Vedmaka"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:Mustache_i18n",
+	"descriptionmsg": "mustache_i18n-desc",
+	"license-name": "MIT",
+	"type": "other",
+	"AutoloadClasses": {
+		"Mustache_i18nHooks": "Mustache_i18n.hooks.php"
+	},
+	"callback": "Mustache_i18nHooks::onExtensionLoad",
+	"ExtensionMessagesFiles": {
+		"Mustache_i18nAlias": "Mustache_i18n.i18n.alias.php"
+	},
+	"Hooks": {}
+}
