@@ -13,5 +13,6 @@ before_script:
   - cd extensions
   - cp -r $TRAVIS_BUILD_DIR Mustache_i18n
   - cd ..
+  - composer install --no-dev
 script:
   - php tests/phpunit/phpunit.php extensions/Mustache_i18n/tests/phpunit/
