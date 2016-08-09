@@ -5,7 +5,7 @@ before_script:
   - cd ..
   - wget https://github.com/wikimedia/mediawiki/archive/1.25.5.tar.gz
   - tar -zxf 1.25.5.tar.gz
-  - mv mediawiki-core-1.25.5 wiki
+  - mv mediawiki-1.25.5 wiki
   - cd wiki
   - mysql -e 'create database wiki;'
   - php maintenance/install.php --dbtype mysql --dbuser root --dbname wiki --dbpath $TRAVIS_BUILD_DIR --pass nyan TravisWiki admin
