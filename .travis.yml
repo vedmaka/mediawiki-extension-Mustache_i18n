@@ -8,7 +8,7 @@ before_script:
   - mv mediawiki-1.25.5 wiki
   - cd wiki
   - mysql -e 'create database wiki;'
-  - composer install --no-dev --quiet --no-interaction
+  - git clone -b REL1_25 https://gerrit.wikimedia.org/r/p/mediawiki/vendor.git
   - php maintenance/install.php --dbtype mysql --dbuser root --dbname wiki --dbpath $TRAVIS_BUILD_DIR --pass nyan TravisWiki admin
   - cd extensions
   - cp -r $TRAVIS_BUILD_DIR Mustache_i18n
