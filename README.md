@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/vedmaka/mediawiki-extension-Mustache_i18n.svg?branch=master)](https://travis-ci.org/vedmaka/mediawiki-extension-Mustache_i18n)
+
 # Intro
 
 **Mustache_i18n** — extension for [Mediawiki](https://mediawiki.org)  which adds i18n support for its templating engine. 
