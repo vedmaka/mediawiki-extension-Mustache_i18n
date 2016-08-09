@@ -12,5 +12,6 @@ before_script:
   - php maintenance/install.php --dbtype mysql --dbuser root --dbname wiki --dbpath $TRAVIS_BUILD_DIR --pass nyan TravisWiki admin
   - cd extensions
   - cp -r $TRAVIS_BUILD_DIR Mustache_i18n
+  - cd ..
 script:
   - php tests/phpunit/phpunit.php extensions/Mustache_i18n/tests/phpunit/
