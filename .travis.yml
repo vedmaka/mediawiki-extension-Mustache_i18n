@@ -1,0 +1,17 @@
+language: php
+php:
+  - '5.6'
+before_script:
+  - cd ..
+  - wget https://github.com/wikimedia/mediawiki/archive/1.25.5.tar.gz
+  - tar -zxf 1.25.5.tar.gz
+  - mv mediawiki-core-1.25.5 wiki
+  - cd wiki
+  - mysql -e 'create database wiki;'
+  - php maintenance/install.php --dbtype mysql --dbuser root --dbname wiki --dbpath $TRAVIS_BUILD_DIR --pass nyan TravisWiki admin
+  - composer update --quiet --no-interaction
+  - cd extensions
+  - cp -r $TRAVIS_BUILD_DIR Mustache_i18n
+  - cd Mustache_i18n
+script:
+  - php tests/phpunit/phpunit.php extensions/Mustache_i18n/tests/phpunit/
