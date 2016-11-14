@@ -15,4 +15,12 @@ class Mustache_i18nHooks
 		$wgAutoloadLocalClasses['TemplateParser'] = dirname( __FILE__ ) . '/TemplateParser.php';
 	}
 
+	/**
+	 * @param OutputPage $out
+	 */
+	public static function onBeforePageDisplay( $out )
+	{
+		$out->addModules('ext.mustache_i18n.foo');
+	}
+
 }

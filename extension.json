@@ -15,5 +15,23 @@
 	"ExtensionMessagesFiles": {
 		"Mustache_i18nAlias": "Mustache_i18n.i18n.alias.php"
 	},
-	"Hooks": {}
+	"Hooks": {
+        "BeforePageDisplay": [
+            "Mustache_i18nHooks::onBeforePageDisplay"
+        ]
+    },
+	"ResourceModules": {
+		"ext.mustache_i18n.foo": {
+			"scripts": [
+				"TemplateParser.js"
+			],
+            "dependencies": [
+                "mediawiki.template.mustache"
+            ]
+		}
+	},
+    "ResourceFileModulePaths": {
+        "localBasePath": "",
+        "remoteExtPath": "Mustache_i18n"
+    }
 }
