@@ -4,7 +4,7 @@ php:
 before_script:
   - cd ..
   - wget https://github.com/wikimedia/mediawiki/archive/1.28.0.tar.gz
-  - tar -zxf mediawiki-1.28.0.tar.gz
+  - tar -zxf 1.28.0.tar.gz
   - mv mediawiki-1.28 wiki
   - cd wiki
   - mysql -e 'create database wiki;'
