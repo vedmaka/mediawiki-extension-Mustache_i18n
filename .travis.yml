@@ -3,12 +3,12 @@ php:
   - '5.6'
 before_script:
   - cd ..
-  - wget https://github.com/wikimedia/mediawiki/archive/1.25.6.tar.gz
-  - tar -zxf 1.25.6.tar.gz
-  - mv mediawiki-1.25.6 wiki
+  - wget https://github.com/wikimedia/mediawiki/archive/1.28.0.tar.gz
+  - tar -zxf 1.28.0.tar.gz
+  - mv mediawiki-1.28 wiki
   - cd wiki
   - mysql -e 'create database wiki;'
-  - git clone -b REL1_25 https://gerrit.wikimedia.org/r/p/mediawiki/vendor.git
+  - git clone -b REL1_28 https://gerrit.wikimedia.org/r/p/mediawiki/vendor.git
   - php maintenance/install.php --dbtype mysql --dbuser root --dbname wiki --dbpath $TRAVIS_BUILD_DIR --pass nyan TravisWiki admin
   - cd extensions
   - cp -r $TRAVIS_BUILD_DIR Mustache_i18n
